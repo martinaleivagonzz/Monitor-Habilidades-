@@ -1,0 +1,7 @@
+﻿skill,frecuencia_mercado,porcentaje_mercado,usuario_tiene,importancia,recomendacion
+Python,120,45.0,False,Crítica,Aprender urgentemente
+Power BI,80,30.0,True,Crítica,Mantener y profundizar
+SQL,78,28.0,False,Crítica,Aprender urgentemente
+SAP,25,8.0,False,Alta,Aprender urgentemente
+Tableau,12,4.0,False,Media,Aprender pronto
+Machine Learning,40,15.0,False,Crítica,Aprender urgentemente

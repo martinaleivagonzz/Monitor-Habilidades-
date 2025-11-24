@@ -1,0 +1,12 @@
+{
+    "usuario": "Martina Leiva",
+    "recomendaciones": [
+        {
+            "habilidad": "Power BI",
+            "curso": "Power BI Fundamentals",
+            "plataforma": "Microsoft Learn",
+            "nivel": "Principiante",
+            "url": "https://docs.microsoft.com/learn/power-platform/power-bi"
+        }
+    ]
+}

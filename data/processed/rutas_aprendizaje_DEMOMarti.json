@@ -1,0 +1,18 @@
+[
+  {
+    "nombre": "Ruta Personalizada: Arquitecta de datos",
+    "objetivo": "Arquitecta de datos",
+    "nivel": "Fundamentos",
+    "timeline": "6-9 meses",
+    "skills_objetivo": [],
+    "fases": [
+      {
+        "fase": 1,
+        "nombre": "Fundamentos",
+        "duracion": "3 meses",
+        "cursos": []
+      }
+    ],
+    "recursos_especificos": []
+  }
+]

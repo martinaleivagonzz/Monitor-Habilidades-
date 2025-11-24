@@ -1,0 +1,26 @@
+{
+    "usuario": "Paulina Gonzalez ",
+    "recomendaciones": [
+        {
+            "habilidad": "Python",
+            "curso": "Python para Todos",
+            "plataforma": "Coursera",
+            "nivel": "Principiante",
+            "url": "https://www.coursera.org/specializations/python"
+        },
+        {
+            "habilidad": "Python",
+            "curso": "Machine Learning con Python",
+            "plataforma": "Coursera",
+            "nivel": "Intermedio",
+            "url": ""
+        },
+        {
+            "habilidad": "Análisis de Datos",
+            "curso": "Análisis de Datos con Excel",
+            "plataforma": "LinkedIn Learning",
+            "nivel": "Intermedio",
+            "url": "https://www.linkedin.com/learning/excel-data-analysis"
+        }
+    ]
+}

@@ -1,0 +1,429 @@
+{
+    "Python": {
+      "Proyectos": ["Crear un scraper de datos", "Analizar dataset de Kaggle"],
+      "Certificados": ["Python for Everybody - Coursera", "DataCamp Python Fundamentals"],
+      "Tutoriales": ["https://realpython.com/", "https://docs.python.org/3/tutorial/"]
+    },
+    "SQL": {
+      "Proyectos": ["Crear base de datos para un e-commerce", "Analizar datos de una API"],
+      "Certificados": ["SQL for Data Science - Coursera", "Mode Analytics SQL Tutorial"],
+      "Tutoriales": ["https://www.w3schools.com/sql/", "https://sqlbolt.com/"]
+    },
+    "Machine Learning": {
+      "Proyectos": ["Clasificación de imágenes con TensorFlow", "Predicción de precios de casas"],
+      "Certificados": ["Machine Learning - Andrew Ng", "DataCamp ML Courses"],
+      "Tutoriales": ["https://scikit-learn.org/stable/tutorial/index.html"]
+    },
+      "cursos_recomendados": {
+        "gratuitos": [
+          {
+            "nombre": "SQL para Ciencia de Datos",
+            "plataforma": "Kaggle",
+            "nivel": "Principiante",
+            "duracion": "4 horas",
+            "url": "https://www.kaggle.com/learn/sql",
+            "skills": ["SQL", "Base de Datos"]
+          },
+          {
+            "nombre": "Python para Todos",
+            "plataforma": "Coursera",
+            "nivel": "Principiante",
+            "duracion": "28 horas",
+            "url": "https://www.coursera.org/specializations/python",
+            "skills": ["Python", "Programación"]
+          },
+          {
+            "nombre": "Power BI Fundamentals",
+            "plataforma": "Microsoft Learn",
+            "nivel": "Principiante",
+            "duracion": "6 horas",
+            "url": "https://docs.microsoft.com/learn/power-platform/power-bi",
+            "skills": ["Power BI", "Business Intelligence"]
+          },
+          {
+            "nombre": "Gestión de Proyectos",
+            "plataforma": "edX",
+            "nivel": "Intermedio",
+            "duracion": "20 horas",
+            "url": "https://www.edx.org/course/project-management",
+            "skills": ["Project Management", "Gestión de Proyectos"]
+          },
+          {
+            "nombre": "Análisis de Datos con Excel",
+            "plataforma": "LinkedIn Learning",
+            "nivel": "Intermedio",
+            "duracion": "8 horas",
+            "url": "https://www.linkedin.com/learning/excel-data-analysis",
+            "skills": ["Excel", "Análisis de Datos"]
+          }
+        ],
+        "de_pago": [
+          {
+            "nombre": "Certificación SAP FI/CO",
+            "plataforma": "SAP Training",
+            "nivel": "Avanzado",
+            "duracion": "80 horas",
+            "costo_aproximado": 2000,
+            "skills": ["SAP", "ERP", "Contabilidad"]
+          },
+          {
+            "nombre": "Tableau Desktop Specialist",
+            "plataforma": "Tableau",
+            "nivel": "Intermedio",
+            "duracion": "40 horas",
+            "costo_aproximado": 500,
+            "skills": ["Tableau", "Visualización", "Business Intelligence"]
+          },
+          {
+            "nombre": "PMP Certification Prep",
+            "plataforma": "PMI",
+            "nivel": "Avanzado",
+            "duracion": "35 horas",
+            "costo_aproximado": 800,
+            "skills": ["Project Management", "PMP", "Gestión de Proyectos"]
+          },
+          {
+            "nombre": "Machine Learning con Python",
+            "plataforma": "Coursera",
+            "nivel": "Intermedio",
+            "duracion": "60 horas",
+            "costo_aproximado": 49,
+            "skills": ["Python", "Machine Learning", "Data Science"]
+          },
+          {
+            "nombre": "Oracle ERP Cloud Certification",
+            "plataforma": "Oracle University",
+            "nivel": "Avanzado",
+            "duracion": "120 horas",
+            "costo_aproximado": 2500,
+            "skills": ["Oracle", "ERP", "Cloud"]
+          }
+        ]
+      },
+      "rutas_aprendizaje": {
+        "business_analyst": {
+          "nombre": "Business Analyst / Analista de Negocio",
+          "descripcion": "Ruta para convertirse en analista de negocio con enfoque en TI",
+          "duracion_estimada": "6-9 meses",
+          "nivel_salida": "Semi-Senior",
+          "skills_obligatorias": ["SQL", "Power BI", "Análisis de Datos", "Business Intelligence", "Excel"],
+          "skills_recomendadas": ["Python", "Gestión de Proyectos", "Scrum"],
+          "fases": [
+            {
+              "fase": 1,
+              "nombre": "Fundamentos Técnicos",
+              "duracion": "2 meses",
+              "cursos": [
+                "SQL para Ciencia de Datos",
+                "Power BI Fundamentals",
+                "Excel Avanzado para Análisis"
+              ],
+              "proyectos": [
+                "Crear base de datos de ventas",
+                "Dashboard de KPIs en Power BI",
+                "Análisis de datos con Excel"
+              ]
+            },
+            {
+              "fase": 2,
+              "nombre": "Análisis de Negocio",
+              "duracion": "3 meses",
+              "cursos": [
+                "Business Analysis Fundamentals",
+                "Gestión de Requerimientos",
+                "Stakeholder Management"
+              ],
+              "proyectos": [
+                "Documentación de procesos AS-IS/TO-BE",
+                "Análisis de caso de negocio real",
+                "Presentación a stakeholders simulados"
+              ]
+            },
+            {
+              "fase": 3,
+              "nombre": "Especialización",
+              "duracion": "3 meses",
+              "cursos": [
+                "Certificación Power BI",
+                "Metodologías Ágiles",
+                "Análisis de Datos Avanzado"
+              ],
+              "proyectos": [
+                "Proyecto integral de análisis",
+                "Dashboard ejecutivo interactivo",
+                "Portafolio de proyectos"
+              ]
+            }
+          ],
+          "certificaciones_recomendadas": [
+            "Power BI Data Analyst Associate",
+            "Certified Business Analysis Professional (CBAP)",
+            "Scrum Fundamentals Certified"
+          ]
+        },
+        "consultor_erp": {
+          "nombre": "Consultor ERP",
+          "descripcion": "Ruta para especializarse en implementación de sistemas ERP",
+          "duracion_estimada": "9-12 meses",
+          "nivel_salida": "Senior",
+          "skills_obligatorias": ["SAP", "Oracle", "ERP", "Gestión de Procesos"],
+          "skills_recomendadas": ["SQL", "Project Management", "Análisis de Negocio"],
+          "fases": [
+            {
+              "fase": 1,
+              "nombre": "Fundamentos ERP",
+              "duracion": "3 meses",
+              "cursos": [
+                "Fundamentos de SAP",
+                "Sistemas ERP Empresariales",
+                "Gestión de Procesos de Negocio"
+              ],
+              "proyectos": [
+                "Mapeo de procesos empresariales",
+                "Configuración módulo SAP/Oracle básico",
+                "Documentación de requerimientos"
+              ]
+            },
+            {
+              "fase": 2,
+              "nombre": "Especialización Técnica",
+              "duracion": "4 meses",
+              "cursos": [
+                "SAP FI/CO Certification",
+                "Oracle ERP Cloud",
+                "Metodologías de Implementación"
+              ],
+              "proyectos": [
+                "Implementación módulo financiero",
+                "Migración de datos",
+                "Plan de capacitación usuarios"
+              ]
+            },
+            {
+              "fase": 3,
+              "nombre": "Consultoría Avanzada",
+              "duracion": "4 meses",
+              "cursos": [
+                "Gestión de Cambio Organizacional",
+                "Consultoría Tecnológica",
+                "Arquitectura Empresarial"
+              ],
+              "proyectos": [
+                "Caso de estudio de transformación digital",
+                "Plan de implementación completo",
+                "Presentación a comité ejecutivo"
+              ]
+            }
+          ],
+          "certificaciones_recomendadas": [
+            "SAP Certified Application Associate",
+            "Oracle ERP Cloud Certification",
+            "Certified ERP Consultant"
+          ]
+        },
+        "project_manager_ti": {
+          "nombre": "Project Manager TI",
+          "descripcion": "Ruta para gestión de proyectos tecnológicos",
+          "duracion_estimada": "8-10 meses",
+          "nivel_salida": "Senior",
+          "skills_obligatorias": ["Project Management", "Scrum", "Agile", "Gestión de Presupuestos"],
+          "skills_recomendadas": ["Liderazgo", "Comunicación", "Negociación"],
+          "fases": [
+            {
+              "fase": 1,
+              "nombre": "Fundamentos de Gestión",
+              "duracion": "3 meses",
+              "cursos": [
+                "Project Management Fundamentals",
+                "Metodologías Ágiles y Scrum",
+                "Gestión de Presupuestos"
+              ],
+              "proyectos": [
+                "Plan de proyecto completo",
+                "Gestión de cronograma",
+                "Cálculo de ROI"
+              ]
+            },
+            {
+              "fase": 2,
+              "nombre": "Certificación y Herramientas",
+              "duracion": "3 meses",
+              "cursos": [
+                "PMP Certification Prep",
+                "Scrum Master Certification",
+                "Herramientas de Gestión (Jira, MS Project)"
+              ],
+              "proyectos": [
+                "Simulación de gestión de proyecto ágil",
+                "Plan de gestión de riesgos",
+                "Comunicación a stakeholders"
+              ]
+            },
+            {
+              "fase": 3,
+              "nombre": "Liderazgo y Estrategia",
+              "duracion": "3 meses",
+              "cursos": [
+                "Liderazgo de Equipos",
+                "Gestión de Portafolio de Proyectos",
+                "Negociación y Resolución de Conflictos"
+              ],
+              "proyectos": [
+                "Gestión de equipo multifuncional",
+                "Presentación a comité directivo",
+                "Caso de estudio de proyecto complejo"
+              ]
+            }
+          ],
+          "certificaciones_recomendadas": [
+            "Project Management Professional (PMP)",
+            "Certified Scrum Master (CSM)",
+            "PRINCE2 Practitioner"
+          ]
+        },
+        "data_analyst": {
+          "nombre": "Data Analyst / Analista de Datos",
+          "descripcion": "Ruta para análisis de datos y business intelligence",
+          "duracion_estimada": "7-9 meses",
+          "nivel_salida": "Semi-Senior",
+          "skills_obligatorias": ["Python", "SQL", "Power BI", "Análisis de Datos"],
+          "skills_recomendadas": ["Machine Learning", "Estadística", "Tableau"],
+          "fases": [
+            {
+              "fase": 1,
+              "nombre": "Fundamentos Técnicos",
+              "duracion": "3 meses",
+              "cursos": [
+                "Python para Análisis de Datos",
+                "SQL Avanzado",
+                "Estadística Aplicada"
+              ],
+              "proyectos": [
+                "Análisis exploratorio de datos",
+                "Consultas SQL complejas",
+                "Limpieza y transformación de datos"
+              ]
+            },
+            {
+              "fase": 2,
+              "nombre": "Visualización y BI",
+              "duracion": "3 meses",
+              "cursos": [
+                "Power BI Avanzado",
+                "Tableau para Visualización",
+                "Storytelling con Datos"
+              ],
+              "proyectos": [
+                "Dashboard ejecutivo interactivo",
+                "Reportes automatizados",
+                "Presentación de insights"
+              ]
+            },
+            {
+              "fase": 3,
+              "nombre": "Análisis Avanzado",
+              "duracion": "2 meses",
+              "cursos": [
+                "Machine Learning Básico",
+                "Análisis Predictivo",
+                "Optimización de Procesos"
+              ],
+              "proyectos": [
+                "Modelo predictivo simple",
+                "Análisis de tendencias",
+                "Recomendaciones de negocio"
+              ]
+            }
+          ],
+          "certificaciones_recomendadas": [
+            "Microsoft Certified: Data Analyst Associate",
+            "Tableau Desktop Specialist",
+            "Google Data Analytics Certificate"
+          ]
+        }
+      },
+      "plataformas_aprendizaje": {
+        "gratuitas": [
+          {
+            "nombre": "Microsoft Learn",
+            "url": "https://docs.microsoft.com/learn",
+            "especialidad": "Microsoft Technologies, Power BI, Azure",
+            "nivel": "Todos los niveles"
+          },
+          {
+            "nombre": "Kaggle Learn",
+            "url": "https://www.kaggle.com/learn",
+            "especialidad": "Data Science, Machine Learning, SQL",
+            "nivel": "Principiante-Intermedio"
+          },
+          {
+            "nombre": "Google Analytics Academy",
+            "url": "https://analytics.google.com/analytics/academy",
+            "especialidad": "Google Analytics, Data Analysis",
+            "nivel": "Principiante-Intermedio"
+          },
+          {
+            "nombre": "SAP Learning Hub",
+            "url": "https://learning.sap.com",
+            "especialidad": "SAP, ERP, Business Processes",
+            "nivel": "Intermedio-Avanzado"
+          }
+        ],
+        "de_pago": [
+          {
+            "nombre": "Coursera",
+            "url": "https://www.coursera.org",
+            "especialidad": "Cursos universitarios, Certificaciones",
+            "costo": "Cursos individuales o suscripción",
+            "nivel": "Todos los niveles"
+          },
+          {
+            "nombre": "Udemy",
+            "url": "https://www.udemy.com",
+            "especialidad": "Cursos prácticos, TI, Negocios",
+            "costo": "Cursos individuales (frecuentes descuentos)",
+            "nivel": "Todos los niveles"
+          },
+          {
+            "nombre": "Platzi",
+            "url": "https://platzi.com",
+            "especialidad": "Tecnología, Programación, Marketing",
+            "costo": "Suscripción mensual/anual",
+            "nivel": "Principiante-Intermedio"
+          },
+          {
+            "nombre": "LinkedIn Learning",
+            "url": "https://www.linkedin.com/learning",
+            "especialidad": "Habilidades profesionales, Software, Negocios",
+            "costo": "Suscripción mensual",
+            "nivel": "Todos los niveles"
+          }
+        ]
+      },
+      "comunidades_recomendadas": [
+        {
+          "nombre": "Stack Overflow",
+          "url": "https://stackoverflow.com",
+          "tipo": "Q&A Técnico",
+          "descripcion": "Comunidad de desarrolladores para resolver problemas técnicos"
+        },
+        {
+          "nombre": "GitHub",
+          "url": "https://github.com",
+          "tipo": "Repositorio de código",
+          "descripcion": "Plataforma para colaborar en proyectos y aprender de código abierto"
+        },
+        {
+          "nombre": "Reddit - r/datascience",
+          "url": "https://www.reddit.com/r/datascience",
+          "tipo": "Foro especializado",
+          "descripcion": "Comunidad de ciencia de datos y análisis"
+        },
+        {
+          "nombre": "Meetup - Tech Communities",
+          "url": "https://www.meetup.com",
+          "tipo": "Eventos presenciales/virtuales",
+          "descripcion": "Encuentra comunidades técnicas locales y eventos"
+        }
+      ]
+    }

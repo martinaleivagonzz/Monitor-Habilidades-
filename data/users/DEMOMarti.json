@@ -1,0 +1,15 @@
+{
+  "nombre": "Demo Marti",
+  "experiencia_años": 1,
+  "skills_actuales": [
+    "Power BI",
+    "Excel"
+  ],
+  "skills_objetivo": [
+    "Python",
+    "SQL"
+  ],
+  "objetivos_carrera": [
+    "Arquitecta de datos"
+  ]
+}

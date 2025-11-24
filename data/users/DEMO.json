@@ -1,0 +1,13 @@
+{
+  "nombre": "Demo Usuario",
+  "experiencia_años": 1,
+  "skills_actuales": [
+    "Excel"
+  ],
+  "skills_objetivo": [
+    "Python"
+  ],
+  "objetivos_carrera": [
+    "Arquitecta de datos"
+  ]
+}

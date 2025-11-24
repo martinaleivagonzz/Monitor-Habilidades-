@@ -1,0 +1,61 @@
+import json
+import os
+
+def crear_user_profile_correcto():
+    """Crea un user_profile.json válido y bien formateado"""
+    
+    perfil = {
+        "nombre": "Paulina",
+        "carrera": "Ingeniería en Informaciones y Control de Gestión",
+        "experiencia_años": 0,
+        "skills_actuales": [
+            "Control de Gestión",
+            "Análisis de Datos", 
+            "Excel Avanzado",
+            "Gestión de Proyectos"
+        ],
+        "skills_objetivo": [
+            "SAP",
+            "Power BI", 
+            "Python",
+            "SQL",
+            "Business Intelligence",
+            "Project Management",
+            "Oracle",
+            "Tableau"
+        ],
+        "objetivos_carrera": [
+            "Business Analyst TI",
+            "Consultor ERP", 
+            "Project Manager",
+            "Analista de Control de Gestión"
+        ],
+        "intereses": [
+            "Business Intelligence",
+            "Transformación Digital",
+            "Mejora de Procesos",
+            "Análisis de Datos para Toma de Decisiones"
+        ]
+    }
+    
+    # Guardar con formato correcto
+    with open("user_profile.json", "w", encoding="utf-8") as f:
+        json.dump(perfil, f, indent=2, ensure_ascii=False)
+    
+    print("✅ user_profile.json creado CORRECTAMENTE")
+    
+    # Verificar que se creó bien
+    if os.path.exists("user_profile.json"):
+        tamaño = os.path.getsize("user_profile.json")
+        print(f"📁 Archivo creado: {tamaño} bytes")
+        
+        # Leer para verificar
+        with open("user_profile.json", "r", encoding="utf-8") as f:
+            contenido = f.read()
+            print("📝 Primeras líneas del archivo:")
+            print(contenido[:200] + "..." if len(contenido) > 200 else contenido)
+    
+    return perfil
+
+# Ejecutar
+crear_user_profile_correcto()
