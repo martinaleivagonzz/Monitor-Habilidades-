@@ -14,7 +14,7 @@ Plataforma que analiza en tiempo real las habilidades más demandadas en el ecos
 ## El Problema Que Resolvemos
 - **Evita perder tiempo** aprendiendo tecnologías que no usa el mercado.
 - **Descubre exactamente** qué habilidades buscan las empresas.
-- **Crea tu roadmap** personalizado de aprendizaje.
+- **Crea tu roadmap** personalizado de aprendizaje.fsdsdf
 
 ### Impacto Real
 - **+68%** alineación habilidades-mercado.
@@ -67,9 +67,34 @@ pip install -r requirements.txt
 streamlit run src/app.py
 ```
 ## Casos de Uso Reales
-### **Para Estudiantes**
-#### Problema: "Estoy en mi tercer año de Ingeniería y no sé en qué especializarme"
-#### Solución: SkillMonitor te muestra la demanda real, salarios promedio y proyección de crecimiento por especialidad.
+**Para Estudiantes**
+Problema"Estoy en mi tercer año de Ingeniería y no sé en qué especializarme"
+Solución: SkillMonitor te muestra la demanda real, salarios promedio y proyección de crecimiento por especialidad.
+
+**Para Profesionales en Transición**
+Problema: "Soy Analista Funcional y quiero pasar a Business Intelligence"
+Solución: Identificamos las habilidades específicas que necesitas y creamos un roadmap con tiempos realistas.
+
+**Para Instituciones Educativas**
+Problema: "¿Nuestra malla curricular está alineada con el mercado laboral?"
+Solución: Reportes detallados de brechas entre formación académica y necesidades de la industria.
+___
+## Enlaces Importantes 
+- Documentación Completa
+- Referencia de API
+- Guía de Despliegue
+- Reportar un Problema
+___
+## Licencia
+Este proyecto está bajo la Licencia MIT - ver el archivo LICENSE para más detalles.
+___
+## 👩‍💻 Acerca de la Creadora 
+**Martina Leiva González** - Estudiante de Ingeniería en Información y Control de Gestión en la Universidad Austral de Chile (UACH).
+> "Creé SkillMonitor porque como estudiante, experimenté de primera mano la frustración de no saber qué habilidades realmente necesitaba para el mercado laboral. Esta herramienta es la que me hubiera gustado tener cuando empecé mi carrera."
+- Email: martina.leivagonzz@proton.me
+- Github: @martinaleivagonzz
+
+
 
 
 
