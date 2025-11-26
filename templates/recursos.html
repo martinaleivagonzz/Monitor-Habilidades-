@@ -1,0 +1,309 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <h1 class="hero-title">🎓 Recursos</h1>
+        <p class="hero-subtitle">Encuentra los mejores recursos para desarrollar tus habilidades</p>
+    </div>
+
+    <!-- Rutas de Aprendizaje -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card-modern fade-in-up">
+                <div class="card-header-modern">
+                    <h5 class="mb-0"><i class="bi bi-signpost-split me-2"></i>Rutas de Aprendizaje por Perfil</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row" id="rutas-aprendizaje">
+                        <div class="col-md-4 mb-4">
+                            <div class="ruta-card">
+                                <div class="ruta-header bg-primary text-white">
+                                    <h6 class="mb-0">Data Scientist</h6>
+                                </div>
+                                <div class="ruta-body">
+                                    <div class="ruta-habilidades">
+                                        <span class="skill-tag">Python</span>
+                                        <span class="skill-tag">Machine Learning</span>
+                                        <span class="skill-tag">SQL</span>
+                                        <span class="skill-tag">Estadística</span>
+                                    </div>
+                                    <div class="ruta-meta">
+                                        <small class="text-muted">
+                                            <i class="bi bi-clock me-1"></i>6-9 meses
+                                        </small>
+                                        <small class="text-muted">
+                                            <i class="bi bi-bar-chart me-1"></i>Avanzado
+                                        </small>
+                                    </div>
+                                    <ul class="ruta-recursos">
+                                        <li>Coursera ML Specialization</li>
+                                        <li>Kaggle Competitions</li>
+                                        <li>Fast.ai Practical DL</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4 mb-4">
+                            <div class="ruta-card">
+                                <div class="ruta-header bg-success text-white">
+                                    <h6 class="mb-0">Business Analyst</h6>
+                                </div>
+                                <div class="ruta-body">
+                                    <div class="ruta-habilidades">
+                                        <span class="skill-tag">SQL</span>
+                                        <span class="skill-tag">Power BI</span>
+                                        <span class="skill-tag">Excel</span>
+                                        <span class="skill-tag">Storytelling</span>
+                                    </div>
+                                    <div class="ruta-meta">
+                                        <small class="text-muted">
+                                            <i class="bi bi-clock me-1"></i>3-6 meses
+                                        </small>
+                                        <small class="text-muted">
+                                            <i class="bi bi-bar-chart me-1"></i>Intermedio
+                                        </small>
+                                    </div>
+                                    <ul class="ruta-recursos">
+                                        <li>Microsoft Power BI Desktop</li>
+                                        <li>SQL for Business Analysis</li>
+                                        <li>Business Cases Practice</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4 mb-4">
+                            <div class="ruta-card">
+                                <div class="ruta-header bg-info text-white">
+                                    <h6 class="mb-0">Data Engineer</h6>
+                                </div>
+                                <div class="ruta-body">
+                                    <div class="ruta-habilidades">
+                                        <span class="skill-tag">SQL</span>
+                                        <span class="skill-tag">Python</span>
+                                        <span class="skill-tag">Spark</span>
+                                        <span class="skill-tag">AWS</span>
+                                    </div>
+                                    <div class="ruta-meta">
+                                        <small class="text-muted">
+                                            <i class="bi bi-clock me-1"></i>6-12 meses
+                                        </small>
+                                        <small class="text-muted">
+                                            <i class="bi bi-bar-chart me-1"></i>Avanzado
+                                        </small>
+                                    </div>
+                                    <ul class="ruta-recursos">
+                                        <li>AWS Data Engineering</li>
+                                        <li>Apache Spark Guide</li>
+                                        <li>Data Pipeline Projects</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recursos por Habilidad -->
+    <div class="row mb-5">
+        <div class="col-lg-8">
+            <div class="card-modern fade-in-up">
+                <div class="card-header-modern">
+                    <h5 class="mb-0"><i class="bi bi-collection me-2"></i>Recursos por Habilidad</h5>
+                </div>
+                <div class="card-body">
+                    <div class="accordion" id="accordionRecursos">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePython">
+                                    <i class="bi bi-code-slash me-2 text-primary"></i>
+                                    <strong>Python</strong>
+                                </button>
+                            </h2>
+                            <div id="collapsePython" class="accordion-collapse collapse show" data-bs-parent="#accordionRecursos">
+                                <div class="accordion-body">
+                                    <div class="recurso-item mb-3">
+                                        <h6>Python for Everybody (Coursera)</h6>
+                                        <p class="text-muted mb-2">Curso completo desde cero hasta aplicaciones web</p>
+                                        <span class="badge bg-primary">Gratuito</span>
+                                        <span class="badge bg-success">Principiante</span>
+                                    </div>
+                                    <div class="recurso-item mb-3">
+                                        <h6>Real Python Tutorials</h6>
+                                        <p class="text-muted mb-2">Artículos y tutoriales prácticos avanzados</p>
+                                        <span class="badge bg-info">Comunidad</span>
+                                        <span class="badge bg-warning">Intermedio</span>
+                                    </div>
+                                    <div class="recurso-item">
+                                        <h6>DataCamp Python Track</h6>
+                                        <p class="text-muted mb-2">Especialización en Python para ciencia de datos</p>
+                                        <span class="badge bg-secondary">Premium</span>
+                                        <span class="badge bg-danger">Avanzado</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePowerBI">
+                                    <i class="bi bi-bar-chart me-2 text-success"></i>
+                                    <strong>Power BI</strong>
+                                </button>
+                            </h2>
+                            <div id="collapsePowerBI" class="accordion-collapse collapse" data-bs-parent="#accordionRecursos">
+                                <div class="accordion-body">
+                                    <div class="recurso-item mb-3">
+                                        <h6>Microsoft Learn Power BI</h6>
+                                        <p class="text-muted mb-2">Ruta oficial de Microsoft con certificación</p>
+                                        <span class="badge bg-primary">Gratuito</span>
+                                        <span class="badge bg-success">Principiante</span>
+                                    </div>
+                                    <div class="recurso-item">
+                                        <h6>Power BI Advanced Course</h6>
+                                        <p class="text-muted mb-2">DAX, Power Query y modelado avanzado</p>
+                                        <span class="badge bg-secondary">Premium</span>
+                                        <span class="badge bg-danger">Avanzado</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4">
+            <!-- Tips de Aprendizaje -->
+            <div class="card-modern mb-4 fade-in-up">
+                <div class="card-header-modern">
+                    <h6 class="mb-0"><i class="bi bi-lightbulb me-2"></i>Tips de Aprendizaje</h6>
+                </div>
+                <div class="card-body">
+                    <div class="tip-item mb-3">
+                        <div class="tip-icon text-primary mb-2">
+                            <i class="bi bi-target"></i>
+                        </div>
+                        <h6>🎯 Enfócate en lo Crítico</h6>
+                        <p class="small mb-0 text-muted">Prioriza las habilidades con mayor demanda en el mercado actual.</p>
+                    </div>
+                    
+                    <div class="tip-item mb-3">
+                        <div class="tip-icon text-success mb-2">
+                            <i class="bi bi-hammer"></i>
+                        </div>
+                        <h6>📚 Aprende Haciendo</h6>
+                        <p class="small mb-0 text-muted">Combina teoría con proyectos prácticos para mejor retención.</p>
+                    </div>
+                    
+                    <div class="tip-item">
+                        <div class="tip-icon text-info mb-2">
+                            <i class="bi bi-arrow-repeat"></i>
+                        </div>
+                        <h6>🔄 Aprendizaje Continuo</h6>
+                        <p class="small mb-0 text-muted">Dedica al menos 5 horas semanales a tu desarrollo profesional.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plan de 3 Meses -->
+            <div class="card-modern fade-in-up">
+                <div class="card-header-modern">
+                    <h6 class="mb-0"><i class="bi bi-calendar-range me-2"></i>Plan de 3 Meses</h6>
+                </div>
+                <div class="card-body">
+                    <div class="timeline">
+                        <div class="timeline-item mb-3">
+                            <div class="timeline-badge bg-primary">MES 1</div>
+                            <div class="timeline-content">
+                                <strong class="d-block">Fundamentos</strong>
+                                <small class="text-muted">Python básico, SQL, Excel avanzado</small>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item mb-3">
+                            <div class="timeline-badge bg-success">MES 2</div>
+                            <div class="timeline-content">
+                                <strong class="d-block">Especialización</strong>
+                                <small class="text-muted">Power BI, Análisis de datos, Estadística</small>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-badge bg-info">MES 3</div>
+                            <div class="timeline-content">
+                                <strong class="d-block">Avanzado</strong>
+                                <small class="text-muted">Machine Learning, Proyectos integradores</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Plataformas Recomendadas -->
+    <div class="card-modern fade-in-up">
+        <div class="card-header-modern">
+            <h5 class="mb-0"><i class="bi bi-laptop me-2"></i>Plataformas de Aprendizaje</h5>
+        </div>
+        <div class="card-body">
+            <div class="row" id="plataformas-aprendizaje">
+                <div class="col-md-3 mb-3">
+                    <div class="platform-card text-center p-4">
+                        <div class="platform-icon text-primary mb-3">
+                            <i class="bi bi-play-btn-fill display-4"></i>
+                        </div>
+                        <h6>Coursera</h6>
+                        <p class="small text-muted mb-2">Cursos de universidades top</p>
+                        <span class="badge bg-primary">Recomendado</span>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 mb-3">
+                    <div class="platform-card text-center p-4">
+                        <div class="platform-icon text-success mb-3">
+                            <i class="bi bi-code-slash display-4"></i>
+                        </div>
+                        <h6>DataCamp</h6>
+                        <p class="small text-muted mb-2">Especializado en datos</p>
+                        <span class="badge bg-success">Popular</span>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 mb-3">
+                    <div class="platform-card text-center p-4">
+                        <div class="platform-icon text-warning mb-3">
+                            <i class="bi bi-mortarboard display-4"></i>
+                        </div>
+                        <h6>Udemy</h6>
+                        <p class="small text-muted mb-2">Amplia variedad</p>
+                        <span class="badge bg-warning">Económico</span>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 mb-3">
+                    <div class="platform-card text-center p-4">
+                        <div class="platform-icon text-info mb-3">
+                            <i class="bi bi-microsoft display-4"></i>
+                        </div>
+                        <h6>Microsoft Learn</h6>
+                        <p class="small text-muted mb-2">Power BI y Azure</p>
+                        <span class="badge bg-info">Gratuito</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/recursos.js') }}"></script>
+{% endblock %}
+

@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <!-- Hero Section -->
+            <div class="hero-section">
+                <h1 class="hero-title">👤 Crear Perfil</h1>
+                <p class="hero-subtitle">Completa tu información para recibir recomendaciones personalizadas</p>
+            </div>
+
+            <!-- Alertas -->
+            <div id="alert-container"></div>
+
+            <!-- Formulario de Registro Moderno -->
+            <div class="card-modern mb-4 fade-in-up">
+                <div class="card-header-modern">
+                    <h5 class="mb-0"><i class="bi bi-person-badge me-2"></i>Información Personal</h5>
+                </div>
+                <div class="card-body">
+                    <form id="registro-form" class="form-modern">
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="user_id" class="form-label fw-semibold">ID de Usuario *</label>
+                                    <input type="text" class="form-control" id="user_id" 
+                                           placeholder="ej: ana_tech" required>
+                                    <div class="form-text">Será tu identificador único en el sistema</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="nombre" class="form-label fw-semibold">Nombre Completo *</label>
+                                    <input type="text" class="form-control" id="nombre" 
+                                           placeholder="Tu nombre completo" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="experiencia" class="form-label fw-semibold">Nivel de Experiencia *</label>
+                                    <select class="form-select" id="experiencia" required>
+                                        <option value="">Selecciona tu nivel...</option>
+                                        <option value="Junior (0-2 años)">👶 Junior (0-2 años)</option>
+                                        <option value="Semi-Senior (2-5 años)">🚀 Semi-Senior (2-5 años)</option>
+                                        <option value="Senior (5+ años)">🎯 Senior (5+ años)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="objetivo" class="form-label fw-semibold">Objetivo Profesional *</label>
+                                    <textarea class="form-control" id="objetivo" rows="3"
+                                              placeholder="Ej: Convertirme en Data Scientist senior..." required></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Habilidades por Categorías -->
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <h5 class="fw-semibold mb-3">🛠️ Habilidades Actuales</h5>
+                                <p class="text-muted">Selecciona las habilidades que ya dominas:</p>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4">
+                            <!-- Habilidades Técnicas -->
+                            <div class="col-md-4 mb-3">
+                                <div class="card-modern h-100">
+                                    <div class="card-header bg-info text-white">
+                                        <h6 class="mb-0">💻 Técnicas</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="skills-tecnicas" class="skills-category">
+                                            <!-- Cargado dinámicamente -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Análisis y Datos -->
+                            <div class="col-md-4 mb-3">
+                                <div class="card-modern h-100">
+                                    <div class="card-header bg-success text-white">
+                                        <h6 class="mb-0">📊 Análisis</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="skills-analisis" class="skills-category">
+                                            <!-- Cargado dinámicamente -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Gestión y Negocio -->
+                            <div class="col-md-4 mb-3">
+                                <div class="card-modern h-100">
+                                    <div class="card-header bg-warning text-dark">
+                                        <h6 class="mb-0">👥 Gestión</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="skills-gestion" class="skills-category">
+                                            <!-- Cargado dinámicamente -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Habilidades Seleccionadas -->
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <div class="card-modern">
+                                    <div class="card-header bg-secondary text-white">
+                                        <h6 class="mb-0">✅ Habilidades Seleccionadas</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="habilidades-seleccionadas" class="d-flex flex-wrap gap-2">
+                                            <span class="text-muted">No hay habilidades seleccionadas</span>
+                                        </div>
+                                        <div class="mt-2">
+                                            <small class="text-muted" id="contador-skills">0 habilidades seleccionadas</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Botón de Envío -->
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-modern btn-primary btn-lg">
+                                    <i class="bi bi-rocket-takeoff me-2"></i>Crear Perfil y Generar Recomendaciones
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Resultados del Registro -->
+            <div id="resultados-registro" class="fade-in-up" style="display: none;">
+                <!-- Se muestra después del registro exitoso -->
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/forms.js') }}"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        loadSkillsOptions();
+        setupRegistrationForm();
+    });
+</script>
+{% endblock %}

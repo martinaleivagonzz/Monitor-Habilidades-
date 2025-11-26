@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <h1 class="hero-title">🚀 SkillMonitor</h1>
+        <p class="hero-subtitle">Sistema Avanzado de Análisis de Habilidades</p>
+    </div>
+
+    <!-- Alertas -->
+    <div id="alert-container"></div>
+
+    <!-- Métricas Principales -->
+    <div class="row mb-5" id="metricas-container">
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="metric-card fade-in-up">
+                <div class="metric-icon">
+                    <i class="bi bi-list-check"></i>
+                </div>
+                <div class="metric-value" id="metric-habilidades">0</div>
+                <div class="metric-label">Habilidades Analizadas</div>
+            </div>
+        </div>
+        
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="metric-card fade-in-up">
+                <div class="metric-icon">
+                    <i class="bi bi-exclamation-triangle"></i>
+                </div>
+                <div class="metric-value" id="metric-prioridad">0</div>
+                <div class="metric-label">Prioridad Crítica</div>
+            </div>
+        </div>
+        
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="metric-card fade-in-up">
+                <div class="metric-icon">
+                    <i class="bi bi-graph-up"></i>
+                </div>
+                <div class="metric-value" id="metric-puntuacion">0%</div>
+                <div class="metric-label">Demanda Promedio</div>
+            </div>
+        </div>
+        
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="metric-card fade-in-up">
+                <div class="metric-icon">
+                    <i class="bi bi-people"></i>
+                </div>
+                <div class="metric-value" id="metric-usuarios">0</div>
+                <div class="metric-label">Usuarios Activos</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gráficos Principales -->
+    <div class="row mb-5">
+        <div class="col-lg-8 mb-4">
+            <div class="card-modern fade-in-up">
+                <div class="card-header-modern">
+                    <h5 class="mb-0"><i class="bi bi-graph-up-arrow me-2"></i>Habilidades Más Demandadas</h5>
+                </div>
+                <div class="card-body">
+                    <div id="priorizacion-chart" class="chart-container-modern">
+                        <div class="text-center py-5">
+                            <div class="loader-modern"></div>
+                            <p class="text-muted mt-3">Cargando análisis de habilidades...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 mb-4">
+            <div class="card-modern fade-in-up h-100">
+                <div class="card-header-modern">
+                    <h5 class="mb-0"><i class="bi bi-lightbulb me-2"></i>Guía de Prioridades</h5>
+                </div>
+                <div class="card-body">
+                    <div class="priority-guide">
+                        <div class="priority-item mb-4">
+                            <span class="badge-modern badge-high">CRÍTICA</span>
+                            <p class="mt-2 mb-1"><strong>Fundamentales</strong></p>
+                            <small class="text-muted">+80% ofertas laborales</small>
+                            <div class="mt-2">
+                                <span class="badge bg-danger">Aprendizaje: INMEDIATO</span>
+                            </div>
+                        </div>
+                        
+                        <div class="priority-item mb-4">
+                            <span class="badge-modern badge-medium">ALTA</span>
+                            <p class="mt-2 mb-1"><strong>Diferenciadoras</strong></p>
+                            <small class="text-muted">Roles especializados</small>
+                            <div class="mt-2">
+                                <span class="badge bg-warning">Aprendizaje: 1-3 MESES</span>
+                            </div>
+                        </div>
+                        
+                        <div class="priority-item">
+                            <span class="badge-modern badge-low">MEDIA</span>
+                            <p class="mt-2 mb-1"><strong>Complementarias</strong></p>
+                            <small class="text-muted">Específicas por industria</small>
+                            <div class="mt-2">
+                                <span class="badge bg-success">Aprendizaje: OPORTUNO</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tabla de Habilidades -->
+    <div class="card-modern fade-in-up">
+        <div class="card-header-modern">
+            <h5 class="mb-0"><i class="bi bi-table me-2"></i>Detalle de Habilidades</h5>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-modern">
+                    <thead>
+                        <tr>
+                            <th>Habilidad</th>
+                            <th>Demanda</th>
+                            <th>Importancia</th>
+                            <th>Categoría</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-habilidades-body">
+                        <tr>
+                            <td colspan="4" class="text-center py-4">
+                                <div class="loader-modern"></div>
+                                <p class="text-muted mt-2">Cargando datos...</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="row mt-5">
+        <div class="col-12 text-center">
+            <div class="card-modern bg-gradient-primary text-white">
+                <div class="card-body py-5">
+                    <h3 class="mb-3">¿Listo para potenciar tu carrera?</h3>
+                    <p class="mb-4">Crea tu perfil personalizado y descubre qué habilidades necesitas desarrollar</p>
+                    <a href="{{ url_for('registro') }}" class="btn btn-light btn-lg">
+                        <i class="bi bi-person-add me-2"></i>Comenzar Ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+{% endblock %}

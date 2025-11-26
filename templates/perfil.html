@@ -1,0 +1,178 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <h1 class="hero-title">🎯 Mi Perfil</h1>
+        <p class="hero-subtitle">Analiza tus brechas y recibe recomendaciones inteligentes</p>
+    </div>
+
+    <!-- Alertas -->
+    <div id="alert-container"></div>
+
+    <!-- Selector de Usuario Moderno -->
+    <div class="card-modern mb-4 fade-in-up">
+        <div class="card-body">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <label class="form-label fw-semibold">Selecciona tu perfil:</label>
+                    <select class="form-select form-modern" id="usuario-selector">
+                        <option value="">Cargando perfiles disponibles...</option>
+                    </select>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <a href="{{ url_for('registro') }}" class="btn btn-modern btn-primary">
+                        <i class="bi bi-person-add me-2"></i>Nuevo Perfil
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenido del Perfil -->
+    <div id="perfil-contenido" style="display: none;">
+        <!-- Header del Usuario -->
+        <div class="card-modern mb-4 fade-in-up">
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h3 id="usuario-nombre" class="mb-1"></h3>
+                        <p id="usuario-experiencia" class="text-muted mb-2"></p>
+                        <p id="usuario-objetivo" class="mb-0 text-muted"></p>
+                    </div>
+                    <div class="col-md-4 text-md-end">
+                        <div class="puntuacion-circle">
+                            <div class="puntuacion-value" id="puntuacion-adecuacion">0%</div>
+                            <div class="puntuacion-label">Adecuación al Mercado</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Métricas del Usuario -->
+        <div class="row mb-4" id="metricas-usuario">
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="metric-card fade-in-up">
+                    <div class="metric-icon">
+                        <i class="bi bi-check-circle"></i>
+                    </div>
+                    <div class="metric-value" id="metric-skills-actuales">0</div>
+                    <div class="metric-label">Habilidades Actuales</div>
+                </div>
+            </div>
+            
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="metric-card fade-in-up">
+                    <div class="metric-icon">
+                        <i class="bi bi-lightbulb"></i>
+                    </div>
+                    <div class="metric-value" id="metric-recomendaciones">0</div>
+                    <div class="metric-label">Recomendaciones</div>
+                </div>
+            </div>
+            
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="metric-card fade-in-up">
+                    <div class="metric-icon">
+                        <i class="bi bi-graph-up"></i>
+                    </div>
+                    <div class="metric-value" id="metric-adecuacion">0%</div>
+                    <div class="metric-label">Adecuación</div>
+                </div>
+            </div>
+            
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="metric-card fade-in-up">
+                    <div class="metric-icon">
+                        <i class="bi bi-exclamation-triangle"></i>
+                    </div>
+                    <div class="metric-value" id="metric-brecha">-</div>
+                    <div class="metric-label">Brecha Principal</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Habilidades y Recomendaciones -->
+        <div class="row mb-4">
+            <div class="col-lg-6 mb-4">
+                <div class="card-modern h-100 fade-in-up">
+                    <div class="card-header-modern">
+                        <h5 class="mb-0"><i class="bi bi-check-circle me-2"></i>Habilidades Actuales</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="habilidades-actuales-list" class="d-flex flex-wrap gap-2">
+                            <!-- Skills chips se cargan aquí -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 mb-4">
+                <div class="card-modern h-100 fade-in-up">
+                    <div class="card-header-modern">
+                        <h5 class="mb-0"><i class="bi bi-lightbulb me-2"></i>Habilidades Recomendadas</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="habilidades-recomendadas-list" class="d-flex flex-wrap gap-2">
+                            <!-- Skills chips se cargan aquí -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gráfico de Brechas -->
+        <div class="card-modern mb-4 fade-in-up">
+            <div class="card-header-modern">
+                <h5 class="mb-0"><i class="bi bi-graph-up me-2"></i>Análisis de Brechas</h5>
+            </div>
+            <div class="card-body">
+                <div id="grafico-brechas" class="chart-container-modern">
+                    <div class="text-center py-5">
+                        <div class="loader-modern"></div>
+                        <p class="text-muted mt-3">Cargando análisis de brechas...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Plan de Acción -->
+        <div class="card-modern fade-in-up">
+            <div class="card-header-modern">
+                <h5 class="mb-0"><i class="bi bi-calendar-check me-2"></i>Plan de Acción Recomendado</h5>
+            </div>
+            <div class="card-body">
+                <div id="plan-accion">
+                    <div class="text-center py-4">
+                        <p class="text-muted">Selecciona un usuario para ver el plan de acción personalizado</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Estado Vacío -->
+    <div id="estado-vacio" class="text-center py-5 fade-in-up">
+        <div class="card-modern">
+            <div class="card-body py-5">
+                <i class="bi bi-people display-1 text-muted mb-4"></i>
+                <h3 class="text-muted mb-3">No hay perfiles disponibles</h3>
+                <p class="text-muted mb-4">
+                    Comienza creando tu perfil personalizado para recibir recomendaciones inteligentes
+                </p>
+                <a href="{{ url_for('registro') }}" class="btn btn-modern btn-primary btn-lg">
+                    <i class="bi bi-person-add me-2"></i>Crear Mi Primer Perfil
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/perfil.js') }}"></script>
+{% endblock %}
+
+

@@ -1,0 +1,230 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <h1 class="hero-title">⚙️ Sistema</h1>
+        <p class="hero-subtitle">Vista general de todos los componentes y datos del sistema</p>
+    </div>
+
+    <!-- Resumen del Sistema -->
+    <div class="row mb-5" id="metricas-sistema">
+        <div class="col-md-3 mb-4">
+            <div class="metric-card text-center fade-in-up">
+                <div class="metric-icon">
+                    <i class="bi bi-database"></i>
+                </div>
+                <div class="metric-value" id="count-habilidades">0</div>
+                <div class="metric-label">Habilidades</div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="metric-card text-center fade-in-up">
+                <div class="metric-icon">
+                    <i class="bi bi-people"></i>
+                </div>
+                <div class="metric-value" id="count-usuarios">0</div>
+                <div class="metric-label">Usuarios</div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="metric-card text-center fade-in-up">
+                <div class="metric-icon">
+                    <i class="bi bi-briefcase"></i>
+                </div>
+                <div class="metric-value" id="count-ofertas">0</div>
+                <div class="metric-label">Ofertas</div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="metric-card text-center fade-in-up">
+                <div class="metric-icon">
+                    <i class="bi bi-collection"></i>
+                </div>
+                <div class="metric-value" id="count-rutas">0</div>
+                <div class="metric-label">Rutas</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pestañas de Componentes -->
+    <div class="card-modern fade-in-up">
+        <div class="card-header-modern">
+            <ul class="nav nav-tabs card-header-tabs" id="sistemaTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="matriz-tab" data-bs-toggle="tab" data-bs-target="#matriz" type="button">
+                        <i class="bi bi-list-check me-2"></i>Matriz
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="usuarios-tab" data-bs-toggle="tab" data-bs-target="#usuarios" type="button">
+                        <i class="bi bi-people me-2"></i>Usuarios
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="ofertas-tab" data-bs-toggle="tab" data-bs-target="#ofertas" type="button">
+                        <i class="bi bi-briefcase me-2"></i>Ofertas
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="recursos-tab" data-bs-toggle="tab" data-bs-target="#recursos" type="button">
+                        <i class="bi bi-book me-2"></i>Recursos
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div class="card-body">
+            <div class="tab-content" id="sistemaTabsContent">
+                <!-- Matriz de Competencias -->
+                <div class="tab-pane fade show active" id="matriz" role="tabpanel">
+                    <div class="table-responsive">
+                        <table class="table table-modern">
+                            <thead>
+                                <tr>
+                                    <th>Habilidad</th>
+                                    <th>Frecuencia</th>
+                                    <th>Demanda</th>
+                                    <th>Importancia</th>
+                                    <th>Recomendación</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabla-matriz">
+                                <tr>
+                                    <td colspan="5" class="text-center py-4">
+                                        <div class="loader-modern"></div>
+                                        <p class="text-muted mt-2">Cargando matriz de competencias...</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Usuarios Registrados -->
+                <div class="tab-pane fade" id="usuarios" role="tabpanel">
+                    <div class="table-responsive">
+                        <table class="table table-modern">
+                            <thead>
+                                <tr>
+                                    <th>Usuario</th>
+                                    <th>Nombre</th>
+                                    <th>Experiencia</th>
+                                    <th>Habilidades</th>
+                                    <th>Adecuación</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabla-usuarios">
+                                <tr>
+                                    <td colspan="5" class="text-center py-4">
+                                        <div class="loader-modern"></div>
+                                        <p class="text-muted mt-2">Cargando usuarios...</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Ofertas Laborales -->
+                <div class="tab-pane fade" id="ofertas" role="tabpanel">
+                    <div class="table-responsive">
+                        <table class="table table-modern">
+                            <thead>
+                                <tr>
+                                    <th>Empresa</th>
+                                    <th>Puesto</th>
+                                    <th>Experiencia</th>
+                                    <th>Salario</th>
+                                    <th>Habilidades</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabla-ofertas">
+                                <tr>
+                                    <td colspan="5" class="text-center py-4">
+                                        <div class="loader-modern"></div>
+                                        <p class="text-muted mt-2">Cargando ofertas...</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Recursos -->
+                <div class="tab-pane fade" id="recursos" role="tabpanel">
+                    <div id="lista-recursos" class="row">
+                        <div class="col-12 text-center py-4">
+                            <div class="loader-modern"></div>
+                            <p class="text-muted mt-2">Cargando recursos...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Información Técnica -->
+    <div class="row mt-5">
+        <div class="col-md-6 mb-4">
+            <div class="card-modern fade-in-up">
+                <div class="card-header-modern">
+                    <h6 class="mb-0"><i class="bi bi-code-slash me-2"></i>Información Técnica</h6>
+                </div>
+                <div class="card-body">
+                    <div class="tech-info">
+                        <div class="tech-item mb-3">
+                            <strong>Framework:</strong> Flask + Python
+                        </div>
+                        <div class="tech-item mb-3">
+                            <strong>Frontend:</strong> Bootstrap 5.3 + Plotly
+                        </div>
+                        <div class="tech-item mb-3">
+                            <strong>Almacenamiento:</strong> JSON + CSV
+                        </div>
+                        <div class="tech-item mb-3">
+                            <strong>ML:</strong> Scikit-learn + Pandas
+                        </div>
+                        <div class="tech-item">
+                            <strong>Despliegue:</strong> Docker Ready
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 mb-4">
+            <div class="card-modern fade-in-up">
+                <div class="card-header-modern">
+                    <h6 class="mb-0"><i class="bi bi-graph-up me-2"></i>Estadísticas del Sistema</h6>
+                </div>
+                <div class="card-body">
+                    <div id="estadisticas-sistema">
+                        <div class="stats-item mb-3">
+                            <div class="stats-label">Tiempo de Respuesta API</div>
+                            <div class="stats-value">~120ms</div>
+                        </div>
+                        <div class="stats-item mb-3">
+                            <div class="stats-label">Uso de Memoria</div>
+                            <div class="stats-value">45MB</div>
+                        </div>
+                        <div class="stats-item mb-3">
+                            <div class="stats-label">Solicitudes/Día</div>
+                            <div class="stats-value">~1,240</div>
+                        </div>
+                        <div class="stats-item">
+                            <div class="stats-label">Usuarios Activos</div>
+                            <div class="stats-value" id="stats-usuarios-activos">0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/sistema.js') }}"></script>
+{% endblock %}
+                                
